@@ -12,10 +12,11 @@ def sim_bar(iteration: int, total: list, bar_length: int = 50, symbol: str = "�
     sys.stdout.flush()
 
 
-num_list = [_ for _ in range(1, 101)]
+if __name__ == "__main__":
+    num_list = [_ for _ in range(1, 101)]
 
-for _, num in enumerate(num_list):
-    sim_bar(_, num_list, bar_length=25)
-    time.sleep(0.1)
-    print(f" [✅️] {num} завершена")
+    for _, num in enumerate(num_list):
+        sim_bar(_, num_list, bar_length=25)
+        time.sleep(0.1)
+        print(f" [✅️] {num} завершена")
     
